@@ -36,7 +36,7 @@ public class ReservaService {
         return reservaRepository.findById(id).orElse(null);
     }
 
-    // ✅ Aquí va tu método corregido
+ 
     public Reserva save(ReservaRequestDTO dto) {
         Pasajero pasajero = pasajeroRepository.findById(dto.getPasajeroId())
                 .orElseThrow(() -> new RuntimeException("Pasajero no encontrado"));
